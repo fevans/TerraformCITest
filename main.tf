@@ -1,11 +1,11 @@
 terraform {
-  required_version = "~> 1.4.0"
   required_providers {
     azurerm = {
-      source  = "hashicorp/azuererm"
-      version = "~> 3.43.0"
+      source  = "hashicorp/azurerm"
+      version = "=3.0.0"
     }
   }
+
   cloud {
     organization = "EVF_Consulting"
     workspaces {
@@ -16,7 +16,7 @@ terraform {
 
 provider "azurerm" {
   features {}
-  skip_provider_registration = true
+ # skip_provider_registration = true
 }
 
 resource "azurerm_resource_group" "rg" {
